@@ -13,16 +13,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        guard let windowScene = (scene as? UIWindowScene) else { return }
         
-        let windowScene = UIWindowScene(session: session, connectionOptions: connectionOptions)
-        window = UIWindow(windowScene: windowScene)
+        window = UIWindow(frame: windowScene.coordinateSpace.bounds)
+        window?.windowScene = windowScene
         let userProfile = UserProfileViewController.loadFromNib()
         let navigationController = UINavigationController(rootViewController: userProfile)
         
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
-        
-        guard let _ = (scene as? UIWindowScene) else { return }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
