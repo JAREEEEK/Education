@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -89,9 +90,6 @@
                                 <state key="normal" title="Показать все комментарии">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <action selector="isPressedCommentButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="dwD-kS-6Si"/>
-                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2me-2J-6vH">
                                 <rect key="frame" x="0.0" y="34" width="488" height="187.5"/>
@@ -116,9 +114,8 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="caption" destination="BN4-DV-dfJ" id="yBi-9w-eNd"/>
-                <outlet property="commentButton" destination="ZOP-G4-83q" id="cSl-ZU-UjG"/>
                 <outlet property="imagePost" destination="Xmn-Xa-bFg" id="587-8D-JBe"/>
-                <outlet property="tableView" destination="2me-2J-6vH" id="qn2-o4-4ww"/>
+                <outlet property="stackView" destination="cfB-ni-GLh" id="p63-0p-j4e"/>
                 <outlet property="userAvatar" destination="TFX-BC-w70" id="1q3-qu-muZ"/>
                 <outlet property="userName" destination="Oj7-tO-VNS" id="MjL-lp-BAx"/>
             </connections>
