@@ -32,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0413200726FDF14100A25B81 /* CommentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentView.xib; sourceTree = "<group>"; };
+		0413200826FDF14100A25B81 /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
 		04190AA526D84E8800B3B997 /* DetailPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPhotoViewController.swift; sourceTree = "<group>"; };
 		04190AA626D84E8800B3B997 /* DetailPhotoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailPhotoViewController.xib; sourceTree = "<group>"; };
 		043E973926EE092900326FB0 /* DetailPhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPhotoTableViewCell.swift; sourceTree = "<group>"; };
@@ -69,6 +71,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0413200926FDF14800A25B81 /* CommentView */ = {
+			isa = PBXGroup;
+			children = (
+				0413200826FDF14100A25B81 /* CommentView.swift */,
+				0413200726FDF14100A25B81 /* CommentView.xib */,
+			);
+			path = CommentView;
+			sourceTree = "<group>";
+		};
 		04190AA926D84E9A00B3B997 /* UserProfileViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +181,7 @@
 		04C0D38926B7369900812AF3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0413200926FDF14800A25B81 /* CommentView */,
 				04190AA926D84E9A00B3B997 /* UserProfileViewController */,
 				04190AAB26D84EE800B3B997 /* CollectionViewCell */,
 				04190AAC26D84F0200B3B997 /* DetailPhotoViewController */,
