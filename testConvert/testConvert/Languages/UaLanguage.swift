@@ -140,13 +140,13 @@ class UaLanguage : LanguageProtocol {
             if tens != 0, !isComplexOrdinalNumber || (isComplexOrdinalNumber && !(numberParts.getLastPart() == index)) {
                 if tens <= 19 {
                     if index == 0 {
-                        result += result + (ordinalToTwenty[tens] ?? "")
+                        result = result + " " + (ordinalToTwenty[tens] ?? "")
                         
-                        if tens % 10 > 9 {
+                        if tens > 9 {
                             result += "й"
                         }
                     } else {
-                        result += result + (numbersToTwenty[tens] ?? "")
+                        result = result + " " + (numbersToTwenty[tens] ?? "")
                     }
                 } else {
                     
@@ -177,12 +177,14 @@ class UaLanguage : LanguageProtocol {
                     
                 }
                 
-                if index == 1 {
-                    if tens == 1 { result += "на" }
-                    else if tens == 2 { result += "i" }
-                } else {
-                    if tens == 1 { result += "ин" }
-                    else if tens == 2 { result += "а" }
+                if tens > 19 || tens < 10 {
+                    if index == 1 {
+                        if tens % 10 == 1 { result += "на" }
+                        else if tens % 10 == 2 { result += "i" }
+                    } else {
+                        if tens % 10 == 1 { result += "ин" }
+                        else if tens % 10 == 2 { result += "а" }
+                    }
                 }
                 if tens % 10 == 5 || tens % 10 == 6 { result += "ь" }
                 result += " "
@@ -212,13 +214,12 @@ class UaLanguage : LanguageProtocol {
                 
                 result = result + getPartName(partIndex: index)
                 
-                let singleNumber = tens % 10
-                if index == 1 {
-                    if singleNumber == 1 { result += "а" }
-                    else if singleNumber > 1, singleNumber < 5  { result += "і" }
+                if index == 1, (tens < 10 || tens > 19) {
+                    if tens == 1 { result += "а" }
+                    else if tens > 1, tens % 10 < 5  { result += "і" }
                 } else {
-                    if singleNumber > 1, singleNumber < 5 { result += "и" }
-                    else if singleNumber >= 5 { result += "ів" }
+                    if tens % 10 > 1, tens % 10 < 5 { result += "и" }
+                    else if tens >= 5, (tens % 10 != 1 || tens == 11) { result += "ів" }
                 }
                 
                 result += " "

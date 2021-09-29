@@ -49,6 +49,8 @@ class FormVC: UIViewController {
             convertedString = germany.convert()
         }
         outputLabel.text = convertedString
+        
+        self.view.endEditing(true)
     }
     
 
